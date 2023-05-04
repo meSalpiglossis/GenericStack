@@ -9,5 +9,9 @@ public class Main {
                 .add(13);
 
         StackMethod.printForEach(stack);
+
+        StackMethod.addToEnd(stack, 9);
+
+        StackMethod.printForEach(stack);
     }
 }

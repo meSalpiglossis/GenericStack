@@ -7,4 +7,10 @@ public class StackMethod {
         } while (stack.hasNext());
     }
 
+    public static <T> void addToEnd(Stack<T> stack, T value) {
+        do {
+            stack = stack.next();
+        } while (stack.next().hasNext());
+        stack.addNewNext(value);
+    }
 }

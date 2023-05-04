@@ -1,7 +1,7 @@
 public class Stack<T> {
 
     private final T value;
-    private final Stack<T> nextEl;
+    private Stack<T> nextEl;
 
     public Stack() {
         value = null;
@@ -29,4 +29,7 @@ public class Stack<T> {
         return nextEl != null;
     }
 
+    public void addNewNext(T value) {
+        nextEl = new Stack<T>(value, new Stack<>());
+    }
 }
