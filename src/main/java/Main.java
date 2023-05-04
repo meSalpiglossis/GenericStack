@@ -8,12 +8,6 @@ public class Main {
                 .add(12)
                 .add(13);
 
-        Stack<Integer> newStack = stack;
-
-        do {
-            System.out.println(newStack.get());
-            newStack = newStack.next();
-        } while (newStack.hasNext());
-
+        StackMethod.printForEach(stack);
     }
 }
