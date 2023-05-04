@@ -1,27 +1,27 @@
-public class Stack {
+public class Stack<T> {
 
-    private final Integer value;
-    private final Stack nextEl;
+    private final T value;
+    private final Stack<T> nextEl;
 
     public Stack() {
         value = null;
         nextEl = null;
     }
 
-    public Stack(Integer value, Stack nextEl) {
+    public Stack(T value, Stack<T> nextEl) {
         this.value = value;
         this.nextEl = nextEl;
     }
 
-    public Stack add(Integer value) {
-        return new Stack(value, this);
+    public Stack<T> add(T value) {
+        return new Stack<>(value, this);
     }
 
-    public Integer get() {
+    public T get() {
         return value;
     }
 
-    public Stack next() {
+    public Stack<T> next() {
         return nextEl;
     }
 
